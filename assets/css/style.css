@@ -20,7 +20,8 @@ header:first-of-type {
 }
 
 input,
-select {
+select,
+textarea {
     outline: 0;
     border: 0;
 }
@@ -39,12 +40,42 @@ select {
     left: 0;
 }
 
+.bg-inherit {
+    background: inherit;
+}
+
 .rounde {
     border-radius: 1rem;
 }
 
+.w300 {
+    width: 300px;
+}
 
-/* start rest-page-sail */
+.burger {
+    text-align: left;
+}
+
+footer.footer {
+    background-image: url(../images/footerbg.png);
+}
+
+.opacity {
+    opacity: 0;
+}
+
+::placeholder {
+    color: #9a8aa6;
+}
+
+@media screen and (max-width: 991px) {
+    .burger {
+        text-align: center;
+    }
+}
+
+
+/* start rest-page-style */
 
 .rest {
     background-image: url(../images/rest-bg.jpg);
@@ -60,5 +91,194 @@ main.rest-product {
     background-size: cover;
 }
 
+.fs12 {
+    font-size: 15px;
+}
 
-/* end rest-page-sail */
+.x {
+    position: absolute;
+    top: 0;
+    right: 00;
+    margin: 10px;
+    font-size: 35px
+}
+
+.down {
+    position: absolute;
+    top: 10%
+}
+
+.pb {
+    padding-bottom: 200px;
+}
+
+
+/* end rest-page-style */
+
+
+/* start add-pro-page-style */
+
+form.add-pro>*,
+form.add-off>* {
+    background-color: #f3f3f3;
+    border-radius: 1rem;
+}
+
+form.add-pro textarea {
+    height: 100px;
+}
+
+
+/* end add-pro-page-style */
+
+
+/* start add-off-page-style */
+
+.add-offer {
+    background: #ececec;
+}
+
+
+/* end add-off-page-style */
+
+
+/* start last-offer-page-style */
+
+.bg-nav {
+    background-color: #ec3454!important;
+}
+
+.under-line::after {
+    content: '';
+    position: absolute;
+    width: 80%;
+    height: 3px;
+    background-color: #240041;
+    top: 150%;
+    left: 50%;
+    transform: translatex(-50%);
+}
+
+.bg-green {
+    background: #009523;
+}
+
+.bg-blueBlack {
+    background-color: #240041;
+}
+
+@media screen and (max-width: 991px) {
+    .under-line::after {
+        top: 100%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .under-line::after {
+        width: 50%;
+        top: 120%
+    }
+}
+
+
+/* end add-off-page-style */
+
+
+/* start add-marct-page-style */
+
+.bg-new {
+    background-image: url(../images/bg\ img.png);
+    background-repeat: no-repeat;
+}
+
+
+/* end add-marct-page-style */
+
+
+/* start rect-order-page-style */
+
+.border-red,
+.border-red>* {
+    border: 2px solid var(--main-color);
+    border-radius: 50%;
+}
+
+.w-8 {
+    width: 80%
+}
+
+.center-y {
+    top: 50%;
+    transform: translatey(-50%);
+}
+
+.shoping {
+    background-image: url(../images/cart-bg.png);
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position: center;
+}
+
+.w-40 {
+    width: 40%;
+    border-radius: 1rem;
+}
+
+.contain {
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+/* Hide the browser's default radio button */
+
+.contain input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+
+/* Create a custom radio button */
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+
+/* On mouse-over, add a grey background color */
+
+.contain:hover input~.checkmark {
+    background-color: #ccc;
+}
+
+
+/* When the radio button is checked, add a blue background */
+
+.contain input:checked~.checkmark {
+    background-color: #240041;
+}
+
+.bg-grad {
+    background-image: linear-gradient( #eb3353, #a10a4a);
+}
+
+.navy-blue {
+    background-color: #240041!important;
+}
+
+
+/* end rect-order-page-style */
