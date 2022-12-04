@@ -81,7 +81,7 @@ footer.footer {
     background-image: url(../images/rest-bg.jpg);
 }
 
-main.rest-product {
+.rest-product {
     background-color: #d0d0d0;
 }
 
@@ -208,8 +208,16 @@ form.add-pro textarea {
 }
 
 .center-y {
+    position: absolute;
     top: 50%;
     transform: translatey(-50%);
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .shoping {
@@ -282,3 +290,84 @@ form.add-pro textarea {
 
 
 /* end rect-order-page-style */
+
+
+/* start index-page-style */
+
+.index-header {
+    background-image: url(../images/header.jpg);
+    height: 75vh;
+}
+
+.rolate {
+    transform: rotate(-25deg);
+    font-size: 200px;
+}
+
+select.w-300 {
+    /* for Firefox */
+    -moz-appearance: none;
+    /* for Chrome */
+    -webkit-appearance: none;
+}
+
+
+/* For IE10 */
+
+select.w-300::-ms-expand {
+    display: none;
+}
+
+.move {
+    top: 30%;
+    left: 17%
+}
+
+.bg-f6 {
+    background-color: #f6f6f6;
+}
+
+.open::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #16bf4e;
+    top: 50%;
+    transform: translatey(-50%);
+    left: 110%;
+    margin-top: 6px;
+}
+
+.close::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #ff3838;
+    top: 50%;
+    transform: translatey(-50%);
+    left: 110%;
+    margin-top: 6px;
+}
+
+.bg-offer {
+    background-image: url(../images/offers-bg.jpg);
+}
+
+@media screen and (max-width:450px) {
+    .rolate {
+        font-size: 100px;
+    }
+}
+
+@media screen and (max-width:375px) {
+    .index-header {
+        background-position-x: 10%;
+    }
+}
+
+
+/* end idex-page-style */
