@@ -26,6 +26,23 @@ textarea {
     border: 0;
 }
 
+aside {
+    z-index: 10;
+    display: none;
+}
+
+aside::after {
+    content: "";
+    position: absolute;
+    width: 100vh;
+    height: 350vh;
+    background: #1b1b1b;
+    opacity: .5;
+    top: -100vh;
+    left: 0;
+    z-index: -1;
+}
+
 .position {
     position: absolute;
     top: 25%;
@@ -355,6 +372,12 @@ select.w-300::-ms-expand {
 
 .bg-offer {
     background-image: url(../images/offers-bg.jpg);
+}
+
+.download {
+    background-image: url('../images/app-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 @media screen and (max-width:450px) {
