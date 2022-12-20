@@ -28,17 +28,17 @@ textarea {
 
 aside {
     z-index: 10;
-    display: none;
+    display: flow-root;
 }
 
 aside::after {
     content: "";
     position: absolute;
-    width: 100vh;
-    height: 350vh;
+    width: 300vh;
+    height: 100vh;
     background: #1b1b1b;
     opacity: .5;
-    top: -100vh;
+    top: 0;
     left: 0;
     z-index: -1;
 }
@@ -55,6 +55,7 @@ aside::after {
     right: 0;
     bottom: 0;
     left: 0;
+    z-index: 15;
 }
 
 .bg-inherit {
@@ -378,6 +379,133 @@ select.w-300::-ms-expand {
     background-image: url('../images/app-bg.png');
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.bg-1b {
+    background-color: #8d8d8d;
+}
+
+.bg-1b aside::after {
+    opacity: 0;
+}
+
+.right-bor {
+    border-right: 3px solid #654c79;
+}
+
+.buy {
+    background-image: url(../images/buy.png);
+    background-repeat: no-repeat;
+    height: 100px;
+    background-size: contain;
+    background-position: center;
+}
+
+div.img {
+    background-image: url(../images/meal-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position-x: -70px;
+    background-position-y: 130px;
+}
+
+.black-cricle {
+    border: 5px solid #1b1b1b;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.mt-- {
+    top: -15px;
+}
+
+.bg-e5 {
+    background-color: #e5e5e5;
+}
+
+p.top.w-25.d-inline-block {
+    position: relative;
+    top: -45px;
+}
+
+.rate {
+    position: relative;
+    top: -50px;
+    left: -50%;
+    transform: translateX(50%);
+    width: fit-content;
+}
+
+.bg-f9 {
+    background-color: #f9f9f9
+}
+
+.height {
+    height: 175px;
+}
+
+.bg-f79a8e {
+    background-color: #f79a8e;
+}
+
+.owl-dots {
+    display: block!important;
+    text-align: center;
+}
+
+.owl-dots>* {
+    width: 20px;
+    height: 20px;
+    background-color: #000!important;
+    border-radius: 50%;
+    margin: 10px;
+}
+
+.owl-dots .owl-dot.active {
+    background-color: var(--main-color)!important;
+}
+
+.hover {
+    overflow: hidden;
+}
+
+@keyframes tr {
+    0% {
+        right: 100%;
+    }
+    90% {
+        right: -10%;
+    }
+    100% {
+        right: 0;
+    }
+}
+
+.hover::after {
+    content: "";
+    width: 100%;
+    background-color: #000;
+    opacity: 0.4;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 100%;
+    border-radius: 1rem;
+}
+
+.hover p {
+    z-index: 3;
+}
+
+.hover:hover::after {
+    animation-name: tr;
+    animation-duration: 1s;
+    right: 5px;
 }
 
 @media screen and (max-width:450px) {
